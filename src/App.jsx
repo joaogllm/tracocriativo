@@ -21,7 +21,7 @@ export default function App() {
           href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
           rel="stylesheet"
         />
-        <Router>
+        <Router basename="/tracocriativo">
           <Navbar />
           <main className="py-4 py-md-5">
             <Routes>
