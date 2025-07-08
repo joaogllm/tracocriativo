@@ -1,0 +1,110 @@
+.galeria-img {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  object-fit: cover;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: #fff;
+}
+
+.masonry-grid {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100% !important;
+}
+
+.masonry-grid-react {
+  display: flex;
+  margin-left: 0;
+  width: 100vw;
+  max-width: 100vw;
+}
+
+.masonry-grid-column {
+  background-clip: padding-box;
+  padding: 0;
+}
+
+.masonry-item-react {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.masonry-img-wrapper-react {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.masonry-img-react {
+  transition: filter 0.3s;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+}
+
+.masonry-hover-overlay-react {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  opacity: 0;
+  transition: background 0.3s, opacity 0.3s;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.masonry-img-wrapper-react:hover .masonry-img-react {
+  filter: brightness(0.5);
+}
+
+.masonry-img-wrapper-react:hover .masonry-hover-overlay-react {
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+}
+
+.masonry-title-react {
+  text-align: center;
+  width: 100%;
+}
+
+.gallery-title {
+  color: #454545;
+  font-family: "Rubik", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 0 20px;
+}
+
+/* Filter indicator styles */
+.filter-info {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.filter-info .badge {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.2);
+}
+
+.filter-info .badge i {
+  font-size: 0.9em;
+}

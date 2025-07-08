@@ -1,0 +1,518 @@
+/* Estilos para o componente ProjetoDetalhe */
+
+.projeto-gallery {
+  position: relative;
+  height: 100%;
+  min-height: 500px;
+  max-height: 600px;
+}
+
+.main-image-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  height: calc(100% - 100px);
+  min-height: 400px;
+}
+
+.main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.main-image:hover {
+  transform: scale(1.02);
+}
+
+/* Botões de navegação */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn-prev {
+  left: 20px;
+}
+
+.nav-btn-next {
+  right: 20px;
+}
+
+.nav-btn i {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* Indicadores */
+.image-indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  min-width: 8px;
+  min-height: 8px;
+}
+
+.indicator.active {
+  background: #fff;
+  transform: scale(1.1);
+}
+
+.indicator:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Miniaturas */
+.thumbnails-container {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ddd transparent;
+  height: 80px;
+  margin-top: 20px;
+}
+
+.thumbnails-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.thumbnails-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.thumbnails-container::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 3px;
+}
+
+.thumbnails-container::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+
+.thumbnails-scroll {
+  display: flex;
+  gap: 12px;
+  padding: 4px 0;
+}
+
+.thumbnail {
+  flex-shrink: 0;
+  width: 80px;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  opacity: 0.7;
+}
+
+.thumbnail.active {
+  border-color: #198754;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.thumbnail:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Informações do projeto */
+.projeto-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  min-height: 500px;
+  max-height: 600px;
+}
+
+.categoria-badge {
+  display: inline-block;
+}
+
+.categoria-badge .badge {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.descricao-section {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 4px solid #198754;
+}
+
+.descricao-section h5 {
+  color: #198754;
+  margin-bottom: 12px;
+}
+
+.descricao-section p {
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Estatísticas do projeto */
+.projeto-stats {
+  margin-top: auto;
+}
+
+.stat-item {
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.stat-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Botão Fullscreen */
+.fullscreen-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+}
+
+.fullscreen-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+  transform: scale(1.1);
+}
+
+.fullscreen-btn i {
+  font-size: 1.1rem;
+}
+
+/* Modal Fullscreen */
+.fullscreen-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(8px);
+}
+
+.fullscreen-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullscreen-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+}
+
+.fullscreen-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.fullscreen-close i {
+  font-size: 1.5rem;
+}
+
+.fullscreen-image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.fullscreen-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+/* Navegação no Fullscreen */
+.fullscreen-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+}
+
+.fullscreen-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.fullscreen-nav-prev {
+  left: 20px;
+}
+
+.fullscreen-nav-next {
+  right: 20px;
+}
+
+.fullscreen-nav-btn i {
+  font-size: 1.5rem;
+}
+
+/* Indicadores no Fullscreen */
+.fullscreen-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.fullscreen-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0;
+  margin: 0;
+  flex-shrink: 0;
+  min-width: 10px;
+  min-height: 10px;
+}
+
+.fullscreen-indicator.active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
+.fullscreen-indicator:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Botão voltar */
+.btn-voltar {
+  background: linear-gradient(135deg, #198754, #20c997);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(25, 135, 84, 0.3);
+}
+
+.btn-voltar:hover {
+  background: linear-gradient(135deg, #157347, #1ea085);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(25, 135, 84, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+.btn-voltar:active {
+  transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .main-image-container {
+    margin-bottom: 20px;
+  }
+
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-btn-prev {
+    left: 10px;
+  }
+
+  .nav-btn-next {
+    right: 10px;
+  }
+
+  .image-indicators {
+    bottom: 15px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 45px;
+  }
+
+  .projeto-info {
+    padding: 15px;
+  }
+
+  .descricao-section {
+    padding: 15px;
+  }
+
+  .stat-item {
+    padding: 15px !important;
+  }
+
+  .stat-number {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .thumbnails-scroll {
+    gap: 8px;
+  }
+
+  .thumbnail {
+    width: 50px;
+    height: 40px;
+  }
+
+  .projeto-info h1 {
+    font-size: 1.75rem;
+  }
+
+  .fullscreen-btn {
+    width: 35px;
+    height: 35px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .fullscreen-close {
+    width: 40px;
+    height: 40px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .fullscreen-nav-btn {
+    width: 45px;
+    height: 45px;
+  }
+
+  .fullscreen-nav-prev {
+    left: 10px;
+  }
+
+  .fullscreen-nav-next {
+    right: 10px;
+  }
+}

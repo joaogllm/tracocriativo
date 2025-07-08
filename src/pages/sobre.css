@@ -1,0 +1,101 @@
+.sobre-main {
+  background: #f3f6fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+.sobre-card {
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(40, 167, 69, 0.1);
+  padding: 3rem 2.5rem;
+  max-width: 840px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .sobre-card {
+    max-width: 98vw;
+    padding: 1.5rem 1rem;
+  }
+}
+.sobre-foto {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border: 4px solid #28a745;
+  box-shadow: 0 4px 16px rgba(40, 167, 69, 0.1);
+}
+.sobre-nome {
+  color: #28a745;
+  font-family: "Rubik", sans-serif;
+  margin-bottom: 0.25rem !important;
+}
+.sobre-titulo {
+  font-size: 1.2rem;
+  color: #454545;
+  margin-bottom: 0.25rem !important;
+}
+.sobre-local {
+  font-size: 1rem;
+  margin-bottom: 0.5rem !important;
+}
+.sobre-section-title {
+  color: #28a745;
+}
+.sobre-bio {
+  font-size: 1.05rem;
+}
+.sobre-exp-icon {
+  width: 48px;
+  height: 48px;
+  background: #e1e9f2;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sobre-exp-icon .bi {
+  font-size: 28px;
+  color: #28a745;
+}
+.sobre-exp-title {
+  font-size: 1.1rem;
+}
+.sobre-exp-desc {
+  font-size: 0.97rem;
+}
+.sobre-contato {
+  margin-bottom: 0.5rem !important;
+}
+.sobre-topo {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.sobre-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 768px) {
+  .sobre-topo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .sobre-info {
+    align-items: center;
+  }
+  .sobre-card {
+    padding: 1rem 0.75rem;
+  }
+  .sobre-main {
+    padding: 0.5rem 0;
+  }
+}
