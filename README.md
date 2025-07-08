@@ -1,4 +1,4 @@
-# tra-ocreativowebsite
+# TracoCriativo
 
 Este é um site de portfólio desenvolvido em React + Vite para a Traço Criativo, com galeria de projetos, filtro por categorias e visualização detalhada de imagens e projetos.
 
